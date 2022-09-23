@@ -2,6 +2,9 @@ package org.example;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.test.util.ReflectionTestUtils;
+
+import static org.junit.Assert.assertTrue;
 
 public class JunitTest {
 
@@ -21,7 +24,7 @@ public class JunitTest {
     public void testAddTwoNumberIfCondition(){
         Junit junit = new Junit();
         Boolean c = junit.addIfElse(2,3);
-        Assert.assertTrue(c);
+        assertTrue(c);
     }
     @Test
     public void testAddTwoNumberElseCondition(){
@@ -54,7 +57,7 @@ public class JunitTest {
     public void testInstededIfconditionTrue(){
         Junit junit = new Junit();
         Boolean c = junit.nestedIfCondition(3,1,2);
-        Assert.assertTrue(c);
+        assertTrue(c);
     }
     @Test
     public void testInstededElsecondition(){
@@ -116,5 +119,23 @@ public class JunitTest {
     public void testCheckException_NullPointerException() throws Exception {
         Junit junit = new Junit();
         junit.checkException(null);
+    }
+
+    @Test
+    public void whenNonPublicField_thenReflectionTestUtilsSetField() {
+        Employee employee = new Employee();
+        ReflectionTestUtils.setField(employee, "id", 1);
+
+        assertTrue(employee.getId().equals(1));
+    }
+
+    @Test
+    public void whenNonPublicMethod_thenReflectionTestUtilsInvokeMethod() {
+        Employee employee = new Employee();
+        ReflectionTestUtils.setField(employee, "id", 1);
+        employee.setName("Smith, John");
+
+        assertTrue(ReflectionTestUtils.invokeMethod(employee, "employeeToString")
+                .equals("id: 1; name: Smith, John"));
     }
 }

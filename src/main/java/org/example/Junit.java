@@ -74,4 +74,6 @@ public class Junit {
             throw new NullPointerException("Exception message");
         }
     }
+
+
 }
