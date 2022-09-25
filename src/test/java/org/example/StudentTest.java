@@ -56,8 +56,13 @@ public class StudentTest {
         Student stu = new Student(teacher);
         String res = stu.findStudentAndTeacher(4567);
         Assert.assertEquals("lisa",res);
-
-
     }
 
+    @Test
+    public void testfindStudentAndTeacher3() {  //
+        when(teacher.findTeacher3()).thenReturn("Abigail");  //
+        Student stu = new Student(teacher);  //
+        String res = stu.findStudentAndTeacher(2489);  //
+        Assert.assertEquals("peter", res);  //
+    }
 }
