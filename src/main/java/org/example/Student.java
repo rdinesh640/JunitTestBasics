@@ -4,7 +4,9 @@ public class Student {
 
     Teacher teacher; // Teacher class reference
 
-    public Student(Teacher teacher) { // using construter we can provide object of an teacher
+    College college;
+
+    public Student(Teacher teacher, College college) { // using construter we can provide object of an teacher
         this.teacher = teacher;
     }
 
@@ -22,5 +24,14 @@ public class Student {
             return "peter";
         }
         return null;
+    }
+
+    public String findStudentAndCollege(int id){
+        if (id == 1456){
+            String clg = college.findCollege();
+            return clg;
+        }
+        else
+            return null;
     }
 }
