@@ -8,6 +8,7 @@ public class Student {
 
     public Student(Teacher teacher, College college) { // using construter we can provide object of an teacher
         this.teacher = teacher;
+        this.college = college;
     }
 
     public String findStudentAndTeacher(int id){
