@@ -13,7 +13,7 @@ public class Calculator {
 
     public String mul(String a,int b, int c){
         try {
-            return a.toString();
+            return a.toString();  // null.toString()
         }
         catch(Exception e){
             System.out.println(e);
