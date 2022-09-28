@@ -11,9 +11,9 @@ public class Calculator {
         return a-b-c;
     }
 
-    public int mul(int a,int b, int c){
+    public String mul(String a,int b, int c){
         try {
-            return a * b * c;
+            return a.toString();
         }
         catch(Exception e){
             System.out.println(e);

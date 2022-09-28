@@ -34,7 +34,7 @@ public class CalculatorTest {
     @Test
     public void testMul() {
         Calculator cal = new Calculator();
-        int res = cal.mul(1, 2, 3);
+        String res = cal.mul("Dinesh", 2, 3);
         Assert.assertEquals(6, res);
     }
 
