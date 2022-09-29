@@ -18,9 +18,9 @@ public class College {
     public String findStudentAndTeachers(int personId, String name){
         if (name !=null){
             if(personId ==id){
-                student.findStudentAndTeacher(id);
-                teacher.findTeacher1();
-                return "student found";
+                String studentName = student.findStudentAndTeacher(id);
+                String teacherName = teacher.findTeacher1();
+                return studentName +" "+ teacherName;
             }
             else{
                 return "no student found";
