@@ -3,27 +3,22 @@ package org.example;
 import org.springframework.util.StringUtils;
 
 public class Employee {
-    private Integer id;
-    private String name;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    private String employeeToString(){
-        return "id: " + getId() + "; name: " + getName();
-    }
+  public String findEmploye(String employeeId, String callerId){
+      if(employeeId.length() > 8){
+          return "IT Dpeartment";
+      }
+      else if (employeeId.length() < 8) {
+              return "Software Deparment";
+          }
+      if(callerId.length()<10){
+          return "Azure Deparment";
+      }
+      else if (callerId.length() > 10) {
+              return "Aws Deparment";
+          }
+      else{
+          return "no Deparment Found";
+      }
+  }
 
 }

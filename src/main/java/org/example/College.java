@@ -4,7 +4,8 @@ public class College {
 
     private Student student;  // saving the object in the student variable; this is the same as declaring the variable student
     private Teacher teacher;  // saving the object in the teacher variable; this is the same as declaring the variable teacher
-    private int id = 145673;  // assigning a value to the variable id  which is of type int. The value being assigned is 145673.
+    private int id = 145673;
+    private String person = "Dinesh";// assigning a value to the variable id  which is of type int. The value being assigned is 145673.
 
     public College(Student student, Teacher teacher) {   // constructor method does not creat new objects; but getting/carrying the object references to the constructor
         this.student = student;  // this.student is the same as on Line 5
