@@ -120,22 +120,4 @@ public class JunitTest {
         Junit junit = new Junit();
         junit.checkException(null);
     }
-
-    @Test
-    public void whenNonPublicField_thenReflectionTestUtilsSetField() {
-        Employee employee = new Employee();
-        ReflectionTestUtils.setField(employee, "id", 1);
-
-        assertTrue(employee.getId().equals(1));
-    }
-
-    @Test
-    public void whenNonPublicMethod_thenReflectionTestUtilsInvokeMethod() {
-        Employee employee = new Employee();
-        ReflectionTestUtils.setField(employee, "id", 1);
-        employee.setName("Smith, John");
-
-        assertTrue(ReflectionTestUtils.invokeMethod(employee, "employeeToString")
-                .equals("id: 1; name: Smith, John"));
-    }
 }
