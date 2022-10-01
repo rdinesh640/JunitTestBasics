@@ -3,12 +3,12 @@ package org.example;
 import org.springframework.util.StringUtils;
 
 public class Employee {
-  public String findEmploye(String employeeId, String callerId){
+  public String findEmployee(String employeeId, String callerId){
       if(employeeId.length() > 8){
-          return "IT Dpeartment";
+          return "IT Department";
       }
       else if (employeeId.length() < 8) {
-              return "Software Deparment";
+              return "Software Department";
           }
       if(callerId.length()<10){
           return "Azure Deparment";

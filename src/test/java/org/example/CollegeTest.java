@@ -15,7 +15,7 @@ public class CollegeTest {
 
     College college;
 
-    @Before  // This Before method will be run before each @Test is run
+    @Before  // This Before method will be run before each @Test is run to avoid creating new object of class Employee within each @Test
     public void setUp() {
         college = new College(student, teacher);  // created object for College class
 
@@ -46,7 +46,7 @@ public class CollegeTest {
 
     @Test
     public void testFindStudentAndTeachers4() {
-        String res = college.findCollege();
+        String res = college.findCollege();  // calling findCollege() method from College class. college is the object reference for College class.
         Assert.assertEquals("Griffith", res);
     }
 }
