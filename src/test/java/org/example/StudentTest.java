@@ -9,6 +9,9 @@ import static org.mockito.Mockito.when;
 
 public class StudentTest {
 
+    Student student;
+    String str;
+
     //Teacher teacher = new Teacher();
     Teacher teacher = Mockito.mock(Teacher.class); // Create of an object using the Mockito framework.
     College college = Mockito.mock(College.class); // Creating a new object using Mockito framework
@@ -85,4 +88,31 @@ public class StudentTest {
         Assert.assertNull(res);
     }
 
+    @Test
+    public void testTruncateAInFirst2Positions() {
+        Student stu = new Student(teacher, college);
+        String res = stu.truncateAInFirst2Positions("A");
+        Assert.assertEquals("", "");
+    }
+
+    @Test
+    public void testTruncateAInFirst2Positions2() {
+        Student stu = new Student(teacher, college);
+        String res = stu.truncateAInFirst2Positions("AA");
+        Assert.assertEquals("BB", res);
+    }
+
+    @Test
+    public void testTruncateAInFirst2Positions3() {
+        Student stu = new Student(teacher, college);
+        String res = stu.truncateAInFirst2Positions("AACD");
+        Assert.assertEquals("CD", res);
+    }
+
+    @Test
+    public void testTruncateAInFirst2Positions4() {
+        Student stu = new Student(teacher, college);
+        String res = stu.truncateAInFirst2Positions("CDAA");
+        Assert.assertEquals("CDAA", res);
+    }
 }
