@@ -35,4 +35,16 @@ public class Student {
         else
             return null;
     }
+
+    //AACD ==> CD, ACD =>CD ,CDAA ===>CDAA
+    public String truncateAInFirst2Positions(String str) { // truncateAInFirst2Positions MEANS we replcae the Char A with empty "";
+        if (str.length() <= 2)
+            return str.replaceAll("A", "");
+
+        String first2Chars = str.substring(0, 2);
+        String stringMinusFirst2Chars = str.substring(2);
+
+        return first2Chars.replaceAll("A", "")
+                + stringMinusFirst2Chars;
+    }
 }
