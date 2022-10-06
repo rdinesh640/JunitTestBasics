@@ -88,28 +88,28 @@ public class StudentTest {
         Assert.assertNull(res);
     }
 
-    @Test
+    @Test  // covers the lines of code 41 and 42
     public void testTruncateAInFirst2Positions() {
         Student stu = new Student(teacher, college);
         String res = stu.truncateAInFirst2Positions("A");
-        Assert.assertEquals("", "");
+        Assert.assertEquals("", "");  // could also write Assert.assertEquals("", res);
     }
 
-    @Test
+    @Test  // covers the lines of code 41 and 42
     public void testTruncateAInFirst2Positions2() {
         Student stu = new Student(teacher, college);
         String res = stu.truncateAInFirst2Positions("AA");
         Assert.assertEquals("BB", res);
     }
 
-    @Test
+    @Test  // covers the lines of code 44-48
     public void testTruncateAInFirst2Positions3() {
         Student stu = new Student(teacher, college);
         String res = stu.truncateAInFirst2Positions("AACD");
         Assert.assertEquals("CD", res);
     }
 
-    @Test
+    @Test  // covers the lines of code 44-48
     public void testTruncateAInFirst2Positions4() {
         Student stu = new Student(teacher, college);
         String res = stu.truncateAInFirst2Positions("CDAA");
