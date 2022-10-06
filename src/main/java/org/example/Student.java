@@ -40,16 +40,11 @@ public class Student {
     public String truncateAInFirst2Positions(String str) { // truncateAInFirst2Positions MEANS we replace one thing with another; the Char A with empty "";
         try {
             if (str.length() <= 2)
-                return str.replaceAll("A", "B");
-        }
+                return str.replaceAll("A", "B");}
         catch(Exception e){
             System.out.println("str is null");
         }
-
         String first2Chars = str.substring(0, 2);   // (0, 2) refers to the index positions in the string AACD; where 0 is A and 2 is C
         String stringMinusFirst2Chars = str.substring(2);
-
-        return first2Chars.replaceAll("A", "")
-                + stringMinusFirst2Chars;
-    }
+        return first2Chars.replaceAll("A", "") + stringMinusFirst2Chars;}
 }

@@ -85,31 +85,44 @@ public class StudentTest {
         Assert.assertNull(res);
     }
 
-    @Test  // covers the lines of code 41 and 42
+    @Test  // covers the lines of code 42 and 43
     public void testTruncateAInFirst2Positions() {
         Student stu = new Student(teacher, college);
         String res = stu.truncateAInFirst2Positions("A");
         Assert.assertEquals("", "");  // could also write Assert.assertEquals("", res);
     }
 
-    @Test  // covers the lines of code 41 and 42
+    @Test  // covers the lines of code 42 and 43
     public void testTruncateAInFirst2Positions2() {
         Student stu = new Student(teacher, college);
         String res = stu.truncateAInFirst2Positions("AA");
         Assert.assertEquals("BB", res);
     }
 
-    @Test  // covers the lines of code 44-48
+    @Test  // covers the lines of code 49-53
     public void testTruncateAInFirst2Positions3() {
         Student stu = new Student(teacher, college);
         String res = stu.truncateAInFirst2Positions("AACD");
         Assert.assertEquals("CD", res);
     }
 
-    @Test  // covers the lines of code 44-48
+    @Test  // covers the lines of code 49-53
     public void testTruncateAInFirst2Positions4() {
         Student stu = new Student(teacher, college);
         String res = stu.truncateAInFirst2Positions("CDAA");
         Assert.assertEquals("CDAA", res);
+    }
+
+    @Test  // covers the lines of code 44-48
+    public void testTruncateAInFirst2Positions5() {
+        Student stu = new Student(teacher, college);
+        String res = stu.truncateAInFirst2Positions("AA");
+        Assert.assertEquals("BB", res);
+    }
+
+    @Test(expected = NullPointerException.class) // covers the lines of code 44-46
+    public void testTruncateAInFirst2PositionsException() {
+        Student stu = new Student(teacher, college);
+        String res = stu.truncateAInFirst2Positions(null);
     }
 }
