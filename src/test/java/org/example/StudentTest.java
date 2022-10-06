@@ -113,14 +113,14 @@ public class StudentTest {
         Assert.assertEquals("CDAA", res);
     }
 
-    @Test  // covers the lines of code 44-48
+    @Test  // This is intended to test the try block
     public void testTruncateAInFirst2Positions5() {
         Student stu = new Student(teacher, college);
         String res = stu.truncateAInFirst2Positions("AA");
         Assert.assertEquals("BB", res);
     }
 
-    @Test(expected = NullPointerException.class) // covers the lines of code 44-46
+    @Test(expected = NullPointerException.class) // This is intended to test the catch block
     public void testTruncateAInFirst2PositionsException() {
         Student stu = new Student(teacher, college);
         String res = stu.truncateAInFirst2Positions(null);
