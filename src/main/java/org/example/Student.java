@@ -38,8 +38,13 @@ public class Student {
 
     //AACD ==> CD, ACD =>CD ,CDAA ===>CDAA
     public String truncateAInFirst2Positions(String str) { // truncateAInFirst2Positions MEANS we replace one thing with another; the Char A with empty "";
-        if (str.length() <= 2)
-            return str.replaceAll("A", "B");
+        try {
+            if (str.length() <= 2)
+                return str.replaceAll("A", "B");
+        }
+        catch(Exception e){
+            System.out.println("str is null");
+        }
 
         String first2Chars = str.substring(0, 2);   // (0, 2) refers to the index positions in the string AACD; where 0 is A and 2 is C
         String stringMinusFirst2Chars = str.substring(2);

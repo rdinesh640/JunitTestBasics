@@ -9,9 +9,6 @@ import static org.mockito.Mockito.when;
 
 public class StudentTest {
 
-    Student student;
-    String str;
-
     //Teacher teacher = new Teacher();
     Teacher teacher = Mockito.mock(Teacher.class); // Create of an object using the Mockito framework.
     College college = Mockito.mock(College.class); // Creating a new object using Mockito framework
