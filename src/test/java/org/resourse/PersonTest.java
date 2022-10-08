@@ -3,15 +3,19 @@ package org.resourse;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
+import org.service.ServicePerson;
+
+import static org.mockito.Mockito.mock;
 
 public class PersonTest {
 
     Person person;  // This is declaration of variable person; but we are not creating an object here; that comes later within @Before method
-
+    ServicePerson ServicePerson = Mockito.mock(ServicePerson.class);
     @Before
     public void setUp() {
 
-        person = new Person();
+        person = new Person(ServicePerson);
     }
     // In the @Before method, we are initializing the Person object. That is the same as creating a new object of Person class
     // This Before method will be run before each @Test is run
