@@ -79,9 +79,33 @@ public class PersonTest {
         when(servicePerson.addNumbers(1, 2)).thenReturn(3);
         int res = person.addTwoNumbers(1, 2);
         Assert.assertEquals(3, res);
-
     }
 
+    @Test  // When we write the test for this return statement, we must make sure to have a equal to b
+    public void testAddTwoNumbers2() {
+        int res = person.addTwoNumbers(5, 5);
+        Assert.assertEquals(5, res);
+    }
 
+    @Test
+    public void testFindNameOfThePerson() {
+        when(servicePerson.findDepartment()).thenReturn("Health Department");
+        String res = person.findNameOfThePerson("12345");
+        Assert.assertEquals("Health Department", res);
+    }
 
+    @Test
+    public void testFindNameOfThePerson2() {
+        when(servicePerson.findOtherDepartment()).thenReturn("Botany Department");
+        String res = person.findNameOfThePerson("123456");
+        Assert.assertEquals("Botany Department", res);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testFindNameOfThePerson3() {
+        when(servicePerson.findOtherDepartment()).thenReturn(null);
+        String res = person.findNameOfThePerson(null);
+        //Assert.assertEquals(null, res);   DO NOT NEED THIS LINE
+    }
 }
+

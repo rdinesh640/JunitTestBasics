@@ -66,7 +66,7 @@ public class Person {
 
     public int addTwoNumbers(int a, int b) {
         if (a == b) {
-            return a;
+            return a;  // When we write the test for this return statement, we must make sure to have a equal to b
         }
         else {
             return servicePerson.addNumbers(a, b);

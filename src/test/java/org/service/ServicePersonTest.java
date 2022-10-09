@@ -24,4 +24,17 @@ public class ServicePersonTest {
         int res = servicePerson.addNumbers(2, 3);
         Assert.assertEquals(5, res);
     }
+
+    @Test
+    public void testFindDepartment() {
+        String res = servicePerson.findDepartment();
+        Assert.assertEquals("Computer Department", res);
+    }
+
+    @Test
+    public void testFindOtherDepartment() {
+        String res = servicePerson.findOtherDepartment();
+        Assert.assertEquals("Mechanical Department", res);
+    }
+
 }
