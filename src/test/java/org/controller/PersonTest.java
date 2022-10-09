@@ -1,4 +1,4 @@
-package org.resourse;
+package org.controller;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -73,4 +73,15 @@ public class PersonTest {
         String res = person.findPersonFromServiceClass("Trisha");
         Assert.assertEquals("6732", res);
     }
+
+    @Test
+    public void testAddTwoNumbers() {
+        when(servicePerson.addNumbers(1, 2)).thenReturn(3);
+        int res = person.addTwoNumbers(1, 2);
+        Assert.assertEquals(3, res);
+
+    }
+
+
+
 }

@@ -6,4 +6,8 @@ public class ServicePerson {  // The ServicePerson class returns the PersonId
 
         return "9832";  // This is the value of the personId
     }
+
+    public int addNumbers(int a, int b) {
+        return a + b;
+    }
 }

@@ -1,4 +1,4 @@
-package org.resourse;
+package org.controller;
 
 import org.service.ServicePerson;
 
@@ -61,6 +61,15 @@ public class Person {
         }
         catch (Exception e) {
             throw e;
+        }
+    }
+
+    public int addTwoNumbers(int a, int b) {
+        if (a == b) {
+            return a;
+        }
+        else {
+            return servicePerson.addNumbers(a, b);
         }
     }
 }

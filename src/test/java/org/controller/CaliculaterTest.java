@@ -1,9 +1,8 @@
-package org.resourse;
+package org.controller;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.resourse.Caliculater;
 
 public class CaliculaterTest {
 
