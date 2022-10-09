@@ -72,4 +72,18 @@ public class Person {
             return servicePerson.addNumbers(a, b);
         }
     }
+
+    public String findNameOfThePerson(String id) {
+        try {
+            if (id.length() == 5) {
+                return servicePerson.findDepartment();
+            }
+            else {
+                return servicePerson.findOtherDepartment();
+            }
+        }
+        catch (Exception e){
+            throw e;
+        }
+    }
 }

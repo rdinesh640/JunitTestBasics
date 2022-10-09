@@ -10,4 +10,12 @@ public class ServicePerson {  // The ServicePerson class returns the PersonId
     public int addNumbers(int a, int b) {
         return a + b;
     }
+
+    public String findDepartment() {
+        return "Computer Department";
+    }
+
+    public String findOtherDepartment() {
+        return "Mechanical Department";
+    }
 }
